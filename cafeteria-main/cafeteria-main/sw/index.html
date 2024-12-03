@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafeteria Delícia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Cafeteria Delícia</h1>
+    <div class="carrinho">
+      <button id="carrinhoBtn">Carrinho (<span id="carrinhoCount">0</span>)</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="produtos">
+      <div class="produto">
+        <img src="img/Captura_de_Tela_2017-08-30_às_23.42.42.png" alt="Café Expresso">
+        <h3>Café Expresso</h3>
+        <p>R$ 5,00</p>
+        <button class="adicionar" onclick="adicionarAoCarrinho('Café Expresso', 5)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="produto">
+        <img src="img/354694-original.webp" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>R$ 8,00</p>
+        <button class="adicionar" onclick="adicionarAoCarrinho('Cappuccino', 8)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="produto">
+        <img src="img/PDP-Mobile-latte.webp" alt="Latte">
+        <h3>Latte</h3>
+        <p>R$ 7,00</p>
+        <button class="adicionar" onclick="adicionarAoCarrinho('Latte', 7)">Adicionar ao Carrinho</button>
+      </div>
+    </section>
+    <section class="produtos">
+        <div class="produto">
+          <img src="img/653aa5a60e22fb4a9f8cecca_Mocha Caramelo 01 .png" alt="Café Expresso">
+          <h3>Mocha Caramelo</h3>
+          <p>R$ 15,00</p>
+          <button class="adicionar" onclick="adicionarAoCarrinho('Mocha Caramelo', 15)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+          <img src="img/images.jpg" alt="Cappuccino">
+          <h3>Frapê</h3>
+          <p>R$ 18,00</p>
+          <button class="adicionar" onclick="adicionarAoCarrinho('Frapê', 18)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+          <img src="img//images (1).jpg" alt="Latte">
+          <h3>Café Gelado</h3>
+          <p>R$ 17,00</p>
+          <button class="adicionar" onclick="adicionarAoCarrinho('Café Gelado', 17)">Adicionar ao Carrinho</button>
+        </div>
+      </section>
+  </main>
+
+  <div id="carrinhoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharCarrinho()">&times;</span>
+      <h2>Carrinho</h2>
+      <ul id="itensCarrinho"></ul>
+      <p>Total: R$ <span id="totalCarrinho">0</span></p>
+      <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
